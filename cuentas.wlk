@@ -6,8 +6,15 @@ object cuentaCorriente {
         saldo += monto
     }
 
+    method validarExtraccion(monto) {
+        if(monto > saldo) {
+            self.error("El saldo " + saldo + " es insuficiente para el monto " + monto)
+        }
+    }
+
     method extraer(monto) {
-        saldo -= monto
+        self.validarExtraccion(monto)
+        saldo -= monto        
     }
 
 }
@@ -40,7 +47,8 @@ object cuentaCombinada {
     }
 
     method extraer(monto) {
-        (if (primaria.saldo() >= monto ) primaria else secundaria).extraer(monto)
+        const cuenta = if (primaria.saldo() >= monto ) primaria else secundaria
+        cuenta.extraer(monto)
         
     }
 

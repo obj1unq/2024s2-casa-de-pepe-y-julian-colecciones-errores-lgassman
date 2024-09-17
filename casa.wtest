@@ -15,7 +15,7 @@ describe "casa de pepe y julian" {
         casa.comprar(cama)
         casa.comprar(plancha)
 
-       assert.equals([heladera, cama, plancha], casa.cosas()) 
+        assert.equals([heladera, cama, plancha], casa.cosas()) 
         assert.equals(3, casa.cantidadDeCosasCompradas()) 
         assert.that(casa.tieneAlgun(electrodomestico)) 
         assert.that(casa.tieneAlgun(mueble)) 
