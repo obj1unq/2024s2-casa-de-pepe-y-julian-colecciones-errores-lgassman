@@ -29,7 +29,7 @@ Implementar, además de los objetos que representan cada cosa, un objeto que rep
 - `queFaltaComprar(lista)`: recibe una lista de cosas y devuelve las cosas de esa lista que aún no se han comprado. <br>
   **Atención**: es una pregunta. No se pide que se compren. 
 - `faltaComida()`: indica si se han comprado menos de 2 cosas que son comida.
--  categoríasCompradas(): indica todas las categorías para las cuales se ha realizado al menos una compra
+-  `categoriasCompradas()``: indica todas las categorías para las cuales se ha realizado al menos una compra
 
 ### Ejemplo
 
